@@ -1,20 +1,25 @@
 {
-  "name": "webpack-boilerplate",
-  "version": "3.0.0",
-  "description": "Plain webpack 3 Boilerplate with Babel, SASS and lodash on board",
-  "author": "Christoph von Gellhorn",
+  "name": "markdown-for-wechat",
+  "version": "1.0.0",
+  "description": "微信公众号的Markdown样式",
+  "author": "GuoXiaoyang",
   "license": "MIT",
   "homepage": "https://github.com/cvgellhorn/webpack-boilerplate",
   "scripts": {
-    "dev": "cross-env NODE_ENV=dev webpack-dev-server --progress --config webpack.config.dev.js",
+    "start": "cross-env NODE_ENV=dev webpack-dev-server --progress --config webpack.config.dev.js",
     "build": "webpack -p --progress --config webpack.config.build.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://cvgellhorn@github.com/cvgellhorn/webpack-boilerplate.git"
+    "url": "git+https://cvgellhorn@github.com/cvgellhorn/webpack-boilerplate.git"
   },
   "dependencies": {
-    "lodash": "^4.17.4"
+    "clipboard": "^1.7.1",
+    "code-prettify": "^0.1.0",
+    "copy-webpack-plugin": "^4.3.1",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.4",
+    "showdown": "^1.8.6"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -32,5 +37,12 @@
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/cvgellhorn/webpack-boilerplate/issues"
+  },
+  "main": "src/index.js",
+  "keywords": [
+    "markdown"
+  ]
 }

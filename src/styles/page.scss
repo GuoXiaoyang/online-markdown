@@ -1,0 +1,31 @@
+html, body {
+  height: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #50616D;
+}
+.github-btn {
+  position: absolute;
+  right: 100px;
+  top: 30px;
+}
+
+#input {
+  width: 50%;
+  position: absolute;
+  left: 0px;
+}
+
+#output {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+}
+.convert-button, .copy-button {
+  position: inherit;
+}
