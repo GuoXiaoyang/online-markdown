@@ -4,14 +4,14 @@
   "description": "微信公众号的Markdown样式",
   "author": "GuoXiaoyang",
   "license": "MIT",
-  "homepage": "https://github.com/cvgellhorn/webpack-boilerplate",
+  "homepage": "https://github.com/GuoXiaoyang/online-markdown",
   "scripts": {
     "start": "cross-env NODE_ENV=dev webpack-dev-server --progress --config webpack.config.dev.js",
     "build": "webpack -p --progress --config webpack.config.build.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://cvgellhorn@github.com/cvgellhorn/webpack-boilerplate.git"
+    "url": "git+https://github.com/GuoXiaoyang/online-markdown.git"
   },
   "dependencies": {
     "clipboard": "^1.7.1",
@@ -39,7 +39,7 @@
     "webpack-dev-server": "^2.9.7"
   },
   "bugs": {
-    "url": "https://github.com/cvgellhorn/webpack-boilerplate/issues"
+    "url": "https://github.com/GuoXiaoyang/online-markdown/issues"
   },
   "main": "src/index.js",
   "keywords": [
