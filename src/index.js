@@ -29,7 +29,7 @@ const OnlineMarkdown = {
     this.bindEvt();
     this.updateOutput();
     new CodeTheme();
-    new PageTheme();
+    this.pageTheme = new PageTheme();
     new Clipboard('.copy-button');
   },
   load: function() {
@@ -47,7 +47,7 @@ const OnlineMarkdown = {
   },
   bindEvt: function() {
     var self = this;
-    $('#input').on('input keydown paste', self.updateOutput);
+    $('#input').on('input keydown paste', self.updateOutput.bind(this));
   },
 
   updateOutput: function () {
@@ -57,6 +57,12 @@ const OnlineMarkdown = {
     $('#outputHtml li').each(function() {
       $(this).html('<span><span>' + $(this).html() + '</span></span>');
     });
+    const pageStyle = $('.page-theme').val();
+    if (pageStyle=== '可能吧-序号') {
+      this.pageTheme.convertHtml();
+    } else if (pageStyle === '可能吧-无序号') {
+      this.pageTheme.convertHtml(false);
+    } 
   }
 }
 
