@@ -1,0 +1,762 @@
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Open Sans Regular'),url('./github/400.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: normal;
+    src: local('Open Sans Italic'),url('./github/400i.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Open Sans Bold'),url('./github/700.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: bold;
+    src: local('Open Sans Bold Italic'),url('./github/700i.woff') format('woff')
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(51, 51, 51);
+	font-size: 15px;
+    line-height: 1.6;
+}
+
+
+#write{
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 20px 30px 40px 30px;
+	padding-top: 20px;
+    padding-bottom: 100px;
+}
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    /*background: url("../../images/modules/styleguide/para.png") no-repeat 10px center;*/
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+
+
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 10px;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 4px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+    border-bottom: 1px solid #ddd;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+/* 一级引用样式 */
+#write > blockquote {
+	position: relative;
+    border-left: none;
+    padding: 0 15px;
+    color: rgb(30, 20, 20);
+}
+
+#write > blockquote:before {
+    content: ' ';
+    position: absolute;
+    top: -5px;
+    right: 0;
+    width: 60px;
+    height: 45px;
+    background-image: url(http://orsvme5pp.bkt.clouddn.com/_image/wechat-css-before.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+#write > blockquote:after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 60px;
+    height: 45px;
+    background-image: url(http://orsvme5pp.bkt.clouddn.com/_image/wechat-css-after.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+#write > blockquote > p {
+    font-size: 18px;
+    padding: 30px 20px;
+}
+/* 二级引用样式 */
+#write > blockquote > blockquote {
+    margin: 0 40px;
+	padding: 10px 0;
+    border-left: 10px solid rgb(247, 156, 156);
+    border-right: 2px solid rgb(247,156,156);
+    background: #ffe9dc;
+}
+
+#write > blockquote > blockquote:before {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 0;
+    background: #fff;
+    width: 45px;
+    height: 40px;
+}
+#write > blockquote > p ~ blockquote:before {
+    content: '';
+    width: 0;
+    height: 0;
+}
+#write > blockquote > blockquote:after {
+    content: '';
+    position: absolute;
+    left: 8px;
+    bottom: 0;
+    z-index: 2;
+    background: #fff;
+    width: 45px;
+    height: 40px;
+}
+#write > blockquote > p ~ blockquote:after {
+    content: '';
+    width: 0;
+    height: 0;
+}
+#write > blockquote > p ~ blockquote p {
+    padding: 30px 10px;
+}
+
+
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #cccccc;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-gutters {
+    border-right: 1px solid #ddd;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0.2em 1em;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+.task-list{
+	padding-left: 0;
+}
+
+.task-list-item {
+	padding-left:32px;
+}
+
+.task-list-item input {
+  top: 3px;
+  left: 8px;
+}
+
+@media screen and (min-width: 914px) {
+    /*body {
+        width: 854px;
+        margin: 0 auto;
+    }*/
+}
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag{
+	color: inherit;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+
+// 覆盖基础样式 以及自定义标题样式
+/**************************************
+ * Header Counters in TOC
+ **************************************/
+
+/* No link underlines in TOC */
+.md-toc-inner {
+    text-decoration: none;
+}
+
+.md-toc-content {
+    counter-reset: h1toc
+}
+
+.md-toc-h1 {
+    margin-left: 0;
+    font-size: 1.5rem;
+    counter-reset: h2toc
+}
+
+.md-toc-h2 {
+    font-size: 1.1rem;
+    margin-left: 2rem;
+    counter-reset: h3toc
+}
+
+.md-toc-h3 {
+    margin-left: 3rem;
+    font-size: .9rem;
+    counter-reset: h4toc
+}
+
+.md-toc-h4 {
+    margin-left: 4rem;
+    font-size: .85rem;
+    counter-reset: h5toc
+}
+
+.md-toc-h5 {
+    margin-left: 5rem;
+    font-size: .8rem;
+    counter-reset: h6toc
+}
+
+.md-toc-h6 {
+    margin-left: 6rem;
+    font-size: .75rem;
+}
+
+.md-toc-h1:before {
+    color: black;
+    counter-increment: h1toc;
+    content: counter(h1toc) ". "
+}
+
+.md-toc-h1 .md-toc-inner {
+    margin-left: 0;
+}
+
+.md-toc-h2:before {
+    color: black;
+    counter-increment: h2toc;
+    content: counter(h1toc) ". " counter(h2toc) ". "
+}
+
+.md-toc-h2 .md-toc-inner {
+    margin-left: 0;
+}
+
+.md-toc-h3:before {
+    color: black;
+    counter-increment: h3toc;
+    content: counter(h1toc) ". " counter(h2toc) ". " counter(h3toc) ". "
+}
+
+.md-toc-h3 .md-toc-inner {
+    margin-left: 0;
+}
+
+.md-toc-h4:before {
+    color: black;
+    counter-increment: h4toc;
+    content: counter(h1toc) ". " counter(h2toc) ". " counter(h3toc) ". " counter(h4toc) ". "
+}
+
+.md-toc-h4 .md-toc-inner {
+    margin-left: 0;
+}
+
+.md-toc-h5:before {
+    color: black;
+    counter-increment: h5toc;
+    content: counter(h1toc) ". " counter(h2toc) ". " counter(h3toc) ". " counter(h4toc) ". " counter(h5toc) ". "
+}
+
+.md-toc-h5 .md-toc-inner {
+    margin-left: 0;
+}
+
+.md-toc-h6:before {
+    color: black;
+    counter-increment: h6toc;
+    content: counter(h1toc) ". " counter(h2toc) ". " counter(h3toc) ". " counter(h4toc) ". " counter(h5toc) ". " counter(h6toc) ". "
+}
+
+.md-toc-h6 .md-toc-inner {
+    margin-left: 0;
+}
+
+/**************************************
+ * Header Counters in Content
+ **************************************/
+
+/** initialize css counter */
+#write {
+    counter-reset: h1
+}
+
+h1 {
+    counter-reset: h2
+}
+
+h2 {
+    counter-reset: h3
+}
+
+h3 {
+    counter-reset: h4
+}
+
+h4 {
+    counter-reset: h5
+}
+
+h5 {
+    counter-reset: h6
+}
+
+/** put counter result into headings */
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6 {
+    position: relative;
+    font-size: 20px;
+    margin-left: 10px;
+	border-bottom: none;
+}
+#write h2 {
+	font-size: 18px;
+}
+#write h3, #write h4, #write h5, #write h6{
+	font-size: 18px;
+}
+
+#write h1:before {
+    counter-increment: h1;
+	content: counter(h1);
+    width: 100%;
+    display: block;
+    font-style: italic;
+    color: rgb(255, 41, 41);
+    padding-bottom: 20px;
+}
+
+#write h1:after {
+    content: '';
+    width: 100%;
+    height: 10px;
+    margin-left: -10px;
+    display: block;
+    position: absolute;
+    top: 45px;
+    background: rgb(247, 156, 156);
+    border-left: 30px solid rgb(255, 41, 41);
+}
+
+#write h1>span {
+	display: block;
+	margin-top: 20px;
+}
+#write h1 ~ p, #write h1 ~ h2, #write h1 ~ h3, #write h1 ~ h4, #write h1 ~ h5,#write h1 ~ h6 {
+	margin-left: 20px;
+}
+#write h2:before {
+	counter-increment: h2;
+    content: counter(h1) "." counter(h2);
+	color: rgb(255, 114, 47);
+}
+#write h2:before, #write h3:before,#write h4:before,#write h5:before,#write h6:before {
+    width: 100%;
+    display: block;
+    font-style: italic;
+    padding-bottom: 20px;
+}
+#write h2>span, #write h3>span, #write h4>span, #write h5>span, #write h6>span {
+	display: block;
+	margin-top: 10px;
+}
+#write h2:after, #write h3:after, #write h4:after, #write h5:after, #write h6:after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    margin-left: -10px;
+    display: block;
+    position: absolute;
+    top: 35px;
+    background: rgb(247, 213, 171);
+    border-left: 30px solid rgb(255, 114, 47);
+}
+
+
+
+#write h3:before, h3.md-focus.md-heading:before { /*override the default style for focused headings */
+    counter-increment: h3;
+    content: counter(h1) "." counter(h2) "." counter(h3) 
+}
+
+#write h3:before, #write h4:before,#write h5:before,#write h6:before {
+    color: rgb(78, 16, 178);
+    padding-bottom: 20px;
+}
+
+
+#write h3:after, #write h4:after, #write h5:after, #write h6:after {
+    background: rgb(218, 171, 247);
+    border-left: 30px solid rgb(78, 16, 178);
+}
+
+
+#write h4:before, h4.md-focus.md-heading:before {
+    counter-increment: h4;
+    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) 
+}
+
+#write h5:before, h5.md-focus.md-heading:before {
+    counter-increment: h5;
+    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) 
+}
+
+#write h6:before, h6.md-focus.md-heading:before {
+    counter-increment: h6;
+    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) 
+}
+
+/** override the default style for focused headings */
+#write>h3.md-focus:before, #write>h4.md-focus:before, #write>h5.md-focus:before, #write>h6.md-focus:before, h3.md-focus:before, h4.md-focus:before, h5.md-focus:before, h6.md-focus:before {
+    border: inherit;
+    border-radius: inherit;
+    position: inherit;
+    left: initial;
+    float: none;
+    top: initial;
+    font-size: inherit;
+    padding-left: inherit;
+    padding-right: inherit;
+    vertical-align: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+/* 修改列表样式 */
+#write ul, #write ol {
+    color: rgb(255, 114, 47);
+    padding: 5px 0;
+    padding-left: 30px;
+    border-left: 5px solid rgb(255, 114, 47);
+    margin-left: 20px;
+}
+
+#write li p {
+	color: rgb(51, 51, 51);
+	padding-left: 5px;
+}
+
+#write ul ol, #write ul ul, #write ol ol, #write ol ul {
+	border-left: none;
+	padding: 0;
+}
+
