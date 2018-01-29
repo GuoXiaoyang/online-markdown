@@ -8,7 +8,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=dev webpack-dev-server --progress --config webpack.config.dev.js",
     "build": "webpack -p --progress --config webpack.config.build.js",
-    "deploy": "gh-pages -b './dist' "
+    "deploy": "gh-pages -d ./dist "
   },
   "repository": {
     "type": "git",
