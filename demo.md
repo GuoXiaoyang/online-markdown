@@ -1,66 +1,41 @@
 # 微信公众号格式化工具
 
-GitHub 地址：[https://github.com/barretlee/online-markdown](https://github.com/barretlee/online-markdown)
+GitHub 地址：[原项目地址](https://github.com/barretlee/online-markdown)
+[当前项目地址](https://github.com/GuoXiaoyang/online-markdown)
 
-> 使用微信公众号编辑器有一个十分头疼的问题——粘贴出来的代码，格式错乱，而且特别丑。这块编辑器能够解决这个问题。
+>> 使用微信公众号编辑器有一个十分头疼的问题——粘贴出来的代码，格式错乱，而且特别丑。这块编辑器能够解决这个问题。
 
 ## Changelog
 
 * 适配 Android
 * 支持代码不转行，横向滚动条
 * 支持页面主题样式配置
-* 新增可能吧微信公众号样式（该样式属于模仿，仅供参考，如有侵权，联系本人github)
+* 新增可能吧微信公众号样式主题，该主题分为带序号以及不带序号版
+* 可能吧主题属于模仿，仅供参考，如有侵权，联系本人github
+## 列表
+*注意：可能吧样式中列表目前只支持一级列表*
+1. 无序列表1
+2. 无序列表2
+3. 无序列表3
+4. 无序列表4
 
-1.  Level 1
-1.  Level 1
-2.  Level 1
-1.  Level 1
-
-//  分隔
-
-
-*   A list item with a blockquote:
-
-    > This is a blockquote
-    > inside a list item.
-
-//  分隔
-
-
-*  level 1
-    *  Level 2
-        *   Level 3
-    *  level 2
-        *  Level 3
-*  Level 1
-
-
-## 可能吧样式
-分为带序号与不带序号版本，
-带序号版本需要从一级标题开始，不然序号会乱
-列表不支持嵌套的样式
-在输入编辑框中更新文本样式会重置，需要重新选择一次样式
-嵌套样式可能会丢失
+* 无序列表1
+* 无序列表2
+* 无序列表3
+* 无序列表4
 
 ## 一级引用
-> 一级引用啊端口啦舒服的啊时刻焕发对结核杆菌给对方设计稿和空间感和健康还是规范健康环境咖啡馆会
+> To be, or not to be: that is a question. Whether it's nobler in the mind to suffer the slings and arrows of outrageous fortune, or to take arms against a sea of troubles, and by opposing end them. To die,to sleep; ——《哈姆雷特》
 
------
-
-> aiefhiuw 
->> aldueiwhyiuwyhr 
 
 ## 二级引用
 >> 我与父亲不相见已有二年余了，我最不能忘记的是他的背影。那年冬天，祖母死了，父亲的差使也交卸了，正是祸不单行的日子，我从北京到徐州，打算跟着父亲奔丧回家。到徐州见着父亲，看见满院狼籍的东西，又想起祖母，不禁簌簌地流下眼泪。父亲说，“事已如此，不必难过，好在天无绝人之路！”
 
 >> 回家变卖典质，父亲还了亏空；又借钱办了丧事。这些日子，家中光景很是惨淡，一半为了丧事，一半为了父亲赋闲。丧事完毕，父亲要到南京谋事，我也要回到北京念书，我们便同行。
 
-------
->> aoirdeh
->>> adljuewsiohfriu
 
 
-### 代码示例
+## 代码示例
 
 ```javascript
 var OnlineMarkdown = {
@@ -102,14 +77,14 @@ OnlineMarkdown.init();
 echo 'hello,world'
 ```
 
-### 表格示例
+## 表格示例
 
 | 品类 | 个数 | 备注 |
 |-----|-----|------|
 | 苹果 | 1   | nice |
 | 橘子 | 2   | job |
 
-### 关于小胡子哥
+## 图片示例
 
 ![微信公众号](http://md.barretlee.com/imgs/qrcode.jpg)
 
